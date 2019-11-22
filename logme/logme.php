@@ -26,8 +26,8 @@ if (isset($_GET['error'])) {
 </head>
 <body>
 	<div class="flag">
-		<a href='logme.php' target='_self'><img src='flagfr.png'></a>
-		<a href='logme.php?lang=eng' target='_self'><img src='flagen.png'></a>
+		<a href='logme.php' target='_self'><img src='flagfr.png' alt='French flag'></a>
+		<a href='logme.php?lang=eng' target='_self'><img src='flagen.png' alt='English flag'></a>
 	</div>
 	<h2 id="idpw"><?php echo $translate['type'];?></h2>
 	<div id="form">

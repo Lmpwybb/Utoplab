@@ -17,8 +17,8 @@ require('translate.php');
 </head>
 <body>
 	<div class="flag">
-		<a href='main.php' target='_self'><img src='flagfr.png'></a>
-		<a href='main.php?lang=eng' target='_self'><img src='flagen.png'></a>
+		<a href='main.php' target='_self'><img src='flagfr.png' alt='French flag'></a>
+		<a href='main.php?lang=eng' target='_self'><img src='flagen.png' alt='English flag'></a>
 	</div>
 	<div id="decob">
 		<form action="logout.php" method="get">
