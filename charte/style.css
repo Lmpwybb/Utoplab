@@ -1,0 +1,24 @@
+body {
+	font-family: Courier New;
+}
+div {
+	text-align: center;
+}
+span {
+	font-style: italic;
+	font-size: medium;
+}
+#title {
+	border: 5px solid red;
+	width: 50%;
+	margin-left: 25%;
+}
+#list {
+	border: 2px solid green;
+	color: green;
+	width: 50%;
+	margin-left: 25%;
+}
+#button {
+	margin-top: 20px;
+}

@@ -1,0 +1,20 @@
+<?php
+$translate = array(
+	'title' => 'Identification form.',
+	'type' => 'Enter your login and password.',
+	'id' => 'Your Login',
+	'password' => 'Your Password',
+	'logbutton' => 'Sign in',
+	'registbutton' => 'Sign up',
+	'bad' => 'Incorrect login and / or password.',
+	'deco' => 'Disconnect',
+	'blackhole' => 'What is a black hole ?',
+	'p1' => 'In astrophysics, a black hole is a celestial object so compact that the intensity of its gravitational field prevents any form of matter or radiation from escaping it.',
+	'p2' => 'Such objects can neither emit nor diffuse light and are therefore black, which in astronomy amounts to saying that they are optically invisible. However, several technics of indirect observation in different wavelengths have been developed and allow to study many phenomena they induce. In particular, the material snapped up by a black hole is heated to considerable temperatures before being "engulfed" and emits a significant amount of X-rays.',
+	'p3' => 'Considered since the 18th century, in the framework of classical mechanics, their existence (predicted by general relativity) is a certainty for almost all astrophysicists and theoretical physicists. Since a black hole is not detectable on the effects of its gravitational field, a nearly direct observation of black holes could be established in February 2016. On April 10, 2019, the first images of a black hole are published, that of M87 Black hole is located in the heart of the M87 galaxy. These different observations are an scientific proof of their existence.',
+	'p4' => 'In the context of general relativity, a black hole is defined as a gravitational singularity occulted by an absolute horizon called horizon of events. According to quantum physics, a black hole is apt to evaporate by the emission of black body radiation called Hawking radiation.',
+	'p5' => 'A black hole should not be confused with a white hole or a wormhole.',
+	'loginexist' => 'This login already exist.',
+	'catch' => 'Connection failed.',
+	'notfilled' => 'One of the fields is not properly filled.',
+	'notloggedin' => 'You are not logged.');

@@ -1,0 +1,32 @@
+.flag {
+	width: 16%;
+	margin-left: 80%;
+}
+#idpw {
+	text-align: center;
+	margin-top: 5%;
+}
+#form {
+	width: 50%;
+	text-align: center;
+	margin-left: 25%;
+}
+#cob {
+	text-align: center;
+	margin-top: 20px;
+}
+#decob {
+	width: 15%;
+	text-align: center;
+	margin-right: 10px;
+	margin-left: 80%;
+}
+#title {
+	text-align: center;
+	margin-top: 1%;
+}
+#hole {
+	width: 75%;
+	text-align: center;
+	margin-left: 12.5%;
+}

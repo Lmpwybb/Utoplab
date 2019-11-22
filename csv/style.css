@@ -1,0 +1,15 @@
+#form {
+	width: 50%;
+	margin-left: 25%;
+	position: inline-block;
+	text-align: center;
+}
+.pos {
+	margin-top: 5%;
+}
+.error {
+	color: red;
+}
+.success {
+	color: green;
+}

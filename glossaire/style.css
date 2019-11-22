@@ -1,0 +1,16 @@
+#tipslength {
+	text-align: center;
+	font-size: 38px;
+	font-weight: bold;
+}
+#tipsbutton {
+	text-align: center;
+	margin-top: 5%;
+}
+#tipsdisplay {
+	text-align: center;
+	margin-top: 5%;
+	width: 50%;
+	margin-left: 25%;
+	font-style: italic;
+}

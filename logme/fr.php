@@ -1,0 +1,20 @@
+<?php
+$translate = array(
+	'title' => 'Formulaire d\'identification.',
+	'type' => 'Entrez votre identifiant et mot de passe.',
+	'id' => 'Votre Identifiant',
+	'password' => 'Votre mot de passe',
+	'logbutton' => 'Se connecter',
+	'registbutton' => 'S\'enregistrer',
+	'bad' => 'Identifiant et / ou mot de passe incorrect.',
+	'deco' => 'Se déconnecter',
+	'blackhole' => 'C\'est quoi un trou noir ?',
+	'p1' => 'En astrophysique, un trou noir est un objet céleste si compact que l\'intensité de son champ gravitationnel empêche toute forme de matière ou de rayonnement de s’en échapper.',
+	'p2' => 'De tels objets ne peuvent ni émettre, ni diffuser la lumière et sont donc noirs, ce qui en astronomie revient à dire qu\'ils sont optiquement invisibles. Toutefois, plusieurs techniques d’observation indirecte dans différentes longueurs d\'onde ont été mises au point et permettent d’étudier de nombreux phénomènes qu’ils induisent. En particulier, la matière happée par un trou noir est chauffée à des températures considérables avant d’être « engloutie » et émet une quantité importante de rayons X.',
+	'p3' => 'Envisagée dès le XVIIIe siècle, dans le cadre de la mécanique classique, leur existence (prédite par la relativité générale) est une certitude pour la quasi-totalité des astrophysiciens et des physiciens théoriciens. Un trou noir n\'étant détectable que par les effets de son champ gravitationnel, une observation quasi-directe de trous noirs a pu être établie en février 2016 par le biais de la première observation directe des ondes gravitationnelles. Le 10 avril 2019, les premières images d\'un trou noir sont publiées, celle de M87, trou noir supermassif situé au cœur de la galaxie M87. Ces différentes observations apportent ainsi la preuve scientifique de leur existence.',
+	'p4' => 'Dans le cadre de la relativité générale, un trou noir est défini comme une singularité gravitationnelle occultée par un horizon absolu appelé horizon des évènements. Selon la physique quantique, un trou noir est susceptible de s\'évaporer par l\'émission d\'un rayonnement de corps noir appelé rayonnement de Hawking.',
+	'p5' => 'Un trou noir ne doit pas être confondu avec un trou blanc ni avec un trou de ver.',
+	'loginexist' => 'Cet utilisateur existe déjà !',
+	'catch' => 'Connexion échouée.',
+	'notfilled' => 'Un des champs n\'est pas correctement remplie.',
+	'notloggedin' => 'Vous n\'êtes pas connecté.');
