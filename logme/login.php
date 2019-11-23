@@ -3,11 +3,11 @@ session_start();
 require('db.php');
 
 if (isset($_POST['signup'])) {
-	if (!empty($_POST['username']) && !empty($_POST['password'])) {
-		$login = $_POST['username'];
+	if (!empty($_POST['email']) && !empty($_POST['password'])) {
+		$login = $_POST['email'];
 		$passhash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 		try {
-			$stmt = $db->prepare('SELECT * FROM users WHERE username=?');
+			$stmt = $db->prepare('SELECT * FROM users WHERE email=?');
 			$stmt->execute(array($login));
 			$exist = $stmt->rowCount() == 0;
 		} 
@@ -16,7 +16,7 @@ if (isset($_POST['signup'])) {
 		}
 		if ($exist === true) {
 			try {
-				$stmt = $db->prepare('INSERT INTO users (username, password) VALUES (?, ?)');
+				$stmt = $db->prepare('INSERT INTO users (email, password) VALUES (?, ?)');
 				$stmt->execute(array($login, $passhash));
 				header('Location: logme.php');
 				die();
@@ -36,12 +36,12 @@ if (isset($_POST['signup'])) {
 }
 
 elseif (isset($_POST['signin'])) {
-	if (!empty($_POST['username']) && !empty($_POST['password'])) {
-		$login = $_POST['username'];
+	if (!empty($_POST['email']) && !empty($_POST['password'])) {
+		$login = $_POST['email'];
 		$password = $_POST['password'];
 		$row = null;
 		try {
-			$stmt = $db->prepare('SELECT * FROM users WHERE username=?');        
+			$stmt = $db->prepare('SELECT * FROM users WHERE email=?');        
 			$stmt->execute(array($login));      
 			$row = $stmt->fetch(PDO::FETCH_ASSOC);
 			$hashverify = password_verify($password, $row['password']);
@@ -50,8 +50,8 @@ elseif (isset($_POST['signin'])) {
 		catch (PDOException $error) {
 			die($translate['catch']);
 		}
-		if ($exists === true && array_key_exists('username', $row) && $hashverify === true) {
-			$_SESSION['username'] = $row['username'];
+		if ($exists === true && array_key_exists('email', $row) && $hashverify === true) {
+			$_SESSION['email'] = $row['email'];
 			$_SESSION['loggedin'] = true;
 			header('Location: main.php');
 			die();

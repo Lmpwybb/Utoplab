@@ -33,7 +33,7 @@ if (isset($_GET['error'])) {
 	<div id="form">
 		<form action="login.php" method="POST">
 			<div>
-				<input type="text" placeholder="<?php echo $translate['id'];?>" name="username"></br>
+				<input type="email" placeholder="<?php echo $translate['id'];?>" name="email"></br>
 				<input type="password" placeholder="<?php echo $translate['password'];?>" name="password">
 			</div>
 			<div id="cob">
