@@ -1,0 +1,123 @@
+/*div { border: 1px solid red}*/
+
+/*Index.php*/
+
+body {
+	font-family: 'Calistoga', cursive;
+}
+#titleindex {
+	position: absolute;
+	right: 12%;
+	top: 20%
+}
+#picture {
+	position: absolute;
+	left: 5%
+}
+#connectform {
+	position: absolute;
+	right: 12%;
+	bottom: 50%
+}
+.getindex {
+	position: absolute;
+	text-align: center;
+	width: 30%;
+	height: 5%;
+	right: 6%;
+	bottom: 40%
+}
+.success {
+	color: #33cc33
+}
+.error {
+	color: #ff0000
+}
+#title {
+	position: absolute;
+	left: 40%
+}
+#loggedform {
+	position: absolute;
+	right: 1%;
+	top: 5%
+}
+#buttons :hover {
+ cursor: pointer
+}
+
+/*Main.php*/
+
+#getmain {
+	position: absolute;
+	text-align: center;
+	top: 5%;
+	width: 30%;
+	height: 5%
+}
+#titlelist {
+	position: absolute;
+	text-align: center;
+	top: 20%;
+	width: 25%
+}
+table {
+	position: absolute;
+	width: 90%;
+	margin-top: 15%;
+	margin-left: 5%;
+	text-align: center;
+	border-collapse: collapse;
+	border-radius: 20px;
+	overflow: hidden
+}
+#stars {
+	position: absolute;
+	margin-top: 20%
+}
+#stars ul li {
+	list-style-type: none
+}
+table th, table td {
+	padding: 20px 50px
+}
+table th {
+	background: #e7e7e7
+}
+table tbody tr:hover {
+	cursor: pointer;
+	background-color: #ffff99
+}
+table img {
+	border-radius: 20px;
+}
+
+/*book1.php*/
+
+#controlbuttons {
+	position: absolute;
+	margin-top: 1%
+}
+.modifytext {
+	margin-top: 30px
+}
+#read {
+	position: absolute;
+	margin-top: 10%
+}
+.next {
+	float: right
+}
+.back {
+	float: left
+}
+#read img:hover{
+	cursor: pointer
+}
+.location h2 {
+	position: absolute;
+	left: 42%
+}
+.active {
+	display:none
+}
