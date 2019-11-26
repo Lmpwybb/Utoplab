@@ -13,7 +13,7 @@ if (isset($_POST['signup'])) {
 				$exist = $stmt->rowCount() == 0;
 			} 
 			catch (PDOException $error) {
-				die("Connexion échouée");
+				die($error->getMessage());
 			}
 			if ($exist === true) {
 				try {
@@ -23,7 +23,7 @@ if (isset($_POST['signup'])) {
 					die();
 				} 
 				catch (PDOException $error) {
-					die("Connexion échouée");
+					die($error->getMessage());
 				}
 			}
 			else {
@@ -54,7 +54,7 @@ elseif (isset($_POST['signin'])) {
 			$exists = $stmt->rowCount() == 1;
 		} 
 		catch (PDOException $error) {
-			die($translate['catch']);
+			die($error->getMessage());
 		}
 		if ($exists === true && array_key_exists('email', $row) && $hashverify === true) {
 			$_SESSION['email'] = $row['email'];

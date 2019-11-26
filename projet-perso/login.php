@@ -10,7 +10,7 @@ if (isset($_POST['signup'])) {
 		// Here this variable hash the password
 		$passhash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 		// Here we are checking if the content of the input is an email type
-		if(filter_var($login, FILTER_VALIDATE_EMAIL)) {
+		if (filter_var($login, FILTER_VALIDATE_EMAIL)) {
 			try {
 				// Here we are checking if the email exist
 				$stmt = $db->prepare('SELECT * FROM users WHERE email=?');
@@ -18,7 +18,7 @@ if (isset($_POST['signup'])) {
 				$exist = $stmt->rowCount() == 0;
 			} 
 			catch (PDOException $error) {
-				die("Connexion échouée");
+				die($error->getMessage());
 			}
 			// If it does not exist
 			if ($exist === true) {
@@ -30,7 +30,7 @@ if (isset($_POST['signup'])) {
 					die();
 				} 
 				catch (PDOException $error) {
-					die("Connexion échouée");
+					die($error->getMessage());
 				}
 			}
 			else {
@@ -68,7 +68,7 @@ elseif (isset($_POST['signin'])) {
 			$exists = $stmt->rowCount() == 1;
 		} 
 		catch (PDOException $error) {
-			die("Connexion échouée");
+			die($error->getMessage());
 		}
 		// Here if the email exists match to an entry and the password matches with the hashed in the db
 		if ($exists === true && array_key_exists('email', $row) && $hashverify === true) {
