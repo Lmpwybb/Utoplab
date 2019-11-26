@@ -6,27 +6,33 @@ if (isset($_POST['signup'])) {
 	if (!empty($_POST['email']) && !empty($_POST['password'])) {
 		$login = $_POST['email'];
 		$passhash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-		try {
-			$stmt = $db->prepare('SELECT * FROM users WHERE email=?');
-			$stmt->execute(array($login));
-			$exist = $stmt->rowCount() == 0;
-		} 
-		catch (PDOException $error) {
-			die($catch['catch']);
-		}
-		if ($exist === true) {
+		if(filter_var($login, FILTER_VALIDATE_EMAIL)) {
 			try {
-				$stmt = $db->prepare('INSERT INTO users (email, password) VALUES (?, ?)');
-				$stmt->execute(array($login, $passhash));
-				header('Location: logme.php');
-				die();
+				$stmt = $db->prepare('SELECT * FROM users WHERE email=?');
+				$stmt->execute(array($login));
+				$exist = $stmt->rowCount() == 0;
 			} 
 			catch (PDOException $error) {
-				die($catch['catch']);
+				die("Connexion échouée");
+			}
+			if ($exist === true) {
+				try {
+					$stmt = $db->prepare('INSERT INTO users (email, password) VALUES (?, ?)');
+					$stmt->execute(array($login, $passhash));
+					header('Location: logme.php?success=signed');
+					die();
+				} 
+				catch (PDOException $error) {
+					die("Connexion échouée");
+				}
+			}
+			else {
+				header('Location: logme.php?error=loginexist');
+				die();
 			}
 		}
 		else {
-			header('Location: logme.php?error=loginexist');
+			header('Location: logme.php?error=notanemail');
 			die();
 		}
     }

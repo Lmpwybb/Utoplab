@@ -9,31 +9,38 @@ if (isset($_POST['signup'])) {
 		$login = $_POST['email'];
 		// Here this variable hash the password
 		$passhash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-		try {
-			// Here we are checking if the email exist
-			$stmt = $db->prepare('SELECT * FROM users WHERE email=?');
-			$stmt->execute(array($login));
-			$exist = $stmt->rowCount() == 0;
-		} 
-		catch (PDOException $error) {
-			die("Connexion échouée");
-		}
-		// If it does not exist
-		if ($exist === true) {
+		// Here we are checking if the content of the input is an email type
+		if(filter_var($login, FILTER_VALIDATE_EMAIL)) {
 			try {
-			 // We insert it in the db with the previous hashed password with an prepare / execute in array
-				$stmt = $db->prepare('INSERT INTO users (email, password) VALUES (?, ?)');
-				$stmt->execute(array($login, $passhash));
-				header('Location: index.php?success=signed');
-				die();
+				// Here we are checking if the email exist
+				$stmt = $db->prepare('SELECT * FROM users WHERE email=?');
+				$stmt->execute(array($login));
+				$exist = $stmt->rowCount() == 0;
 			} 
 			catch (PDOException $error) {
 				die("Connexion échouée");
 			}
+			// If it does not exist
+			if ($exist === true) {
+				try {
+				// We insert it in the db with the previous hashed password with an prepare / execute in array
+					$stmt = $db->prepare('INSERT INTO users (email, password) VALUES (?, ?)');
+					$stmt->execute(array($login, $passhash));
+					header('Location: index.php?success=signed');
+					die();
+				} 
+				catch (PDOException $error) {
+					die("Connexion échouée");
+				}
+			}
+			else {
+				// If the email exist, the user will be redirect with an error
+				header('Location: index.php?error=loginexist');
+				die();
+			}
 		}
 		else {
-			// If the email exist, the user will be redirect with an error
-			header('Location: index.php?error=loginexist');
+			header('Location: index.php?error=notanemail');
 			die();
 		}
     }
@@ -84,3 +91,4 @@ elseif (isset($_POST['signin'])) {
 		die();
 	}
 }
+	

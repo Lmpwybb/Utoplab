@@ -40,6 +40,9 @@
 		<?php
 		// Here we are checking if there is error return in GET and we display the sentence associate to the error
 			if (isset($_GET['error'])) {
+				if ($_GET['error'] == 'notanemail') {
+					echo "Vous n'avez pas rentré une adresse email.";
+				}
 				if ($_GET['error'] == 'bad') {
 					echo "Identifiant et / ou mot de passe incorrect.";
 				}
