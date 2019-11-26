@@ -15,6 +15,6 @@ $translate = array(
 	'p4' => 'Dans le cadre de la relativité générale, un trou noir est défini comme une singularité gravitationnelle occultée par un horizon absolu appelé horizon des évènements. Selon la physique quantique, un trou noir est susceptible de s\'évaporer par l\'émission d\'un rayonnement de corps noir appelé rayonnement de Hawking.',
 	'p5' => 'Un trou noir ne doit pas être confondu avec un trou blanc ni avec un trou de ver.',
 	'loginexist' => 'Cet utilisateur existe déjà !',
-	'catch' => 'Connexion échouée.',
+	'notanemail' => '"Vous n\'avez pas rentré une adresse email.',
 	'notfilled' => 'Un des champs n\'est pas correctement remplie.',
 	'notloggedin' => 'Vous n\'êtes pas connecté.');

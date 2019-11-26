@@ -3,7 +3,7 @@ require('translate.php');
 
 if (isset($_GET['error'])) {
 	if ($_GET['error'] == 'notanemail') {
-		echo "Vous n'avez pas rentré une adresse email.";
+		echo $translate['notanemail'];
 	}
 	if ($_GET['error'] == 'bad') {
 		echo $translate['bad'];

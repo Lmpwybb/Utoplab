@@ -15,6 +15,6 @@ $translate = array(
 	'p4' => 'In the context of general relativity, a black hole is defined as a gravitational singularity occulted by an absolute horizon called horizon of events. According to quantum physics, a black hole is apt to evaporate by the emission of black body radiation called Hawking radiation.',
 	'p5' => 'A black hole should not be confused with a white hole or a wormhole.',
 	'loginexist' => 'This login already exist.',
-	'catch' => 'Connection failed.',
+	'notanemail' => 'This is not an email type.',
 	'notfilled' => 'One of the fields is not properly filled.',
 	'notloggedin' => 'You are not logged.');
