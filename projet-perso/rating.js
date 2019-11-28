@@ -1,5 +1,5 @@
 StarOutUrl = 'StarOut.gif';
-StarHoverUrl = 'StarOver.gif';
+StarOverUrl = 'StarOver.gif';
 StarBaseId = 'Star';
 NbStar = 5;
 
@@ -12,19 +12,17 @@ function Name2Nb(Star) {
 	return(StarNb);
 }
 
-// This function displays the StarHoverUrl with the id associated due to the function Name2Nb.
-function StarOver(Star) {
-	StarNb = Name2Nb(Star);
-	for (i=1;i<(StarNb*1)+1;i++) {
-		document.getElementById('Star'+i).src = StarHoverUrl;
+// This function displays the StarUrl with the id associated due to the function Name2Nb.
+function StarSwitch(Star, Type) {
+// 	Type can be over or out
+	if (Type == 'Over') {
+		StarUrl = StarOverUrl;
+	} else {
+		StarUrl = StarOutUrl;
 	}
-}
-
-// This function displays the StarOutUrl with the id associated due to the function Name2Nb.
-function StarOut(Star) {
 	StarNb = Name2Nb(Star);
 	for (i=1;i<(StarNb*1)+1;i++) {
-		document.getElementById('Star'+i).src = StarOutUrl;
+		document.getElementById('Star'+i).src = StarUrl;
 	}
 }
 
@@ -33,13 +31,13 @@ function NotationSystem() {
 	for (i=1;i<NbStar+1;i++) {
 		var img = document.getElementById('Star'+i);
 		img.src= StarOutUrl;
-		// 	On mouseover the StarOver() function start.
+		// 	On mouseover the StarSwitch() function start.
 		img.onmouseover = function() {
-			StarOver(this.id);
+			StarSwitch(this.id, 'Over');
 		};
-		// 	On mouseout the StarOut() function start.
+		// 	On mouseout the StarSwitch() function start.
 		img.onmouseout = function() {
-			StarOut(this.id);
+			StarSwitch(this.id, 'Out');
 		};
 		// 	This will make an alert of the rate you gave.
 		img.onclick = function() {
