@@ -9,6 +9,10 @@ if (isset($_GET['error'])) {
 		echo "Les champs n'ont pas étaient correctement remplies";
 	}
 }
+
+// Return of the function $db in db.php. 
+$db = getConnection();
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">

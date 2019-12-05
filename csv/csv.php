@@ -25,7 +25,7 @@
 						if ($_GET['error'] == 'filerror') {
 							echo "Uniquement les fichiers .csv sont autorisés.";
 						}
-						if ($_GET['error'] == 'upload') {
+						if ($_GET['error'] == 'import') {
 							echo "Il y a eu une erreur lors de l'importation.";
 						}
 						if ($_GET['error'] == 'content') {
@@ -37,8 +37,10 @@
 			<div class="pos success">
 				<?php
 					if (isset($_GET['success'])) {
-						if ($_GET['success'] == 'upload') {
-							echo "Le fichier a bien été importé.";
+						if ($_GET['success'] == 'import') {
+							echo "Le fichier a bien été importé.<br>";
+							echo "La table a bien été crée dans la base de donnée.<br>";
+							echo "EN COURS.";
 						}
 					}
 				?>

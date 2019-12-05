@@ -2,6 +2,9 @@
 session_start();
 require('db.php');
 
+// Return of the function $db in db.php. 
+$db = getConnection();
+
 // Here once the signup isset button
 if (isset($_POST['signup'])) {
 	// We are checking if the inputs are not empty

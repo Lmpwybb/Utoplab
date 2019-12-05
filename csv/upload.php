@@ -1,6 +1,8 @@
 <?php
-
 require('db.php');
+
+// Return of the function $db in db.php. 
+$db = getConnection();
 
 if (isset($_POST['upload'])) {
 	$target_dir = "csv-uploads/";
@@ -30,26 +32,25 @@ if (isset($_POST['upload'])) {
 			}
 			$sql = substr($sql,0,strlen($sql)-2);
 			$sql .= ');';
+			$row[]=$data;
 			try {
  				$stmt = $db->prepare($sql);
  				$stmt->execute(array($sql));
- 			} 
- 			catch (PDOException $error) {
- 				die("Connexion échouée");
- 			}
- 			try {
- 				$stmt = $db->prepare('INSERT INTO users (?, ?, ?) VALUES (?, ?, ?)');
- 				$stmt->execute(array($handle));
- 				header('Location: csv.php?success=upload');
+ 				$stmt2 = $db->prepare('INSERT INTO users (id, name, first_name, email) VALUES (?, ?, ?, ?)');
+ 				foreach($row as $insert)
+					{
+						$stmt2->execute($insert);
+					}
+ 				header('Location: csv.php?success=import');
  				die();
  			} 
  			catch (PDOException $error) {
- 				die("Connexion échouée");
+ 				die($error->getMessage());
  			}
  			fclose($handle);
 			}
 		else {
-			header('Location: csv.php?error=upload');
+			header('Location: csv.php?error=import');
 			die();
 		}
 	}

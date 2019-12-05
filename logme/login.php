@@ -2,6 +2,9 @@
 session_start();
 require('db.php');
 
+// Return of the function $db in db.php. 
+$db = getConnection();
+
 if (isset($_POST['signup'])) {
 	if (!empty($_POST['email']) && !empty($_POST['password'])) {
 		$login = $_POST['email'];
