@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Projet Javascript Formulaire</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>Formulaire d'inscription</h1>
+	<h2 id="response"></h2>
+	<form id="form" method="POST">
+		<div class="button-div">
+			<input id="reset-button" class="button" type="reset" value="Annuler">
+		</div>
+		<div id="input">
+			<label for="pseudo">Pseudo:</label><br>
+			<input type="text" name="pseudo" id="pseudo" required><br>
+			<span id="helpPseudo"></span><br>
+				
+			<label for="name">Nom:</label><br>
+			<input type="text" name="name" id="name" required><br>
+			<span id="helpName"></span><br>
+				
+			<label for="first-name">Prénom:</label><br>
+			<input type="text" name="first-name" id="first-name" required><br>
+			<span id="helpFn"></span><br>
+			
+			<label for="date">Date de naissance:</label><br>
+			<input type="text" name="date" id="date" required><br>
+			<span id="helpDate"></span><br>
+				
+			<label for="email">Courriel:</label><br>
+			<input type="email" name="email" id="email" required><br>
+			<span id="helpEmail"></span><br>
+				
+			<label for="password">Mot de passe:</label><br>
+			<input type="password" name="password" id="password" required><br>
+			<span id="helpPassword"></span><br>
+				
+			<label for="confpassword">Confirmation:</label><br>
+			<input type="password" name="confpassword" id="confpassword" required><br>
+			<span id="helpConfpassword"></span><br>
+				
+			<label for="sex">Sexe:</label><br>
+			<select name="sex" id="sex" required>
+				<option value="" selected>Choisissez un sexe:</option>
+				<option value="F">Femme</option>
+				<option value="H">Homme</option>
+			</select><br>
+		</div>
+		<div class="button-div">
+			<input id="submit-button" class="button" type="submit" value="Envoyer">
+		</div>
+	</form>
+	<script src="signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+h1 {
+	text-align: center;
+}
+h2 {
+	text-align: center;
+}
+form {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.button-div {
+	margin-top: 35%;
+	width: 100px;
+	height: 50px;
+}
+#input {
+	width: 50%;
+}
+.button {
+	width: 100%;
+	height: 100%;
+}
