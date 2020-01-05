@@ -1,13 +1,13 @@
 const colorError = "red";
 const colorHelp = "green";
-var errorPseudo;
-var errorEmail;
-var errorDate;
-var errorConfPassword;
+let errorPseudo;
+let errorEmail;
+let errorDate;
+let errorConfPassword;
 
 // Help for pseudo
-var focusPseudo = document.querySelector("#pseudo");
-var helpPseudo = document.querySelector("#helpPseudo");
+const focusPseudo = document.querySelector("#pseudo");
+const helpPseudo = document.querySelector("#helpPseudo");
 
 focusPseudo.addEventListener("focus", function () {
 	helpPseudo.textContent = "Entrez votre pseudo";
@@ -32,8 +32,8 @@ focusPseudo.addEventListener("blur", function () {
 });
 
 // Help for Name
-var focusName = document.querySelector("#name");
-var helpName = document.querySelector("#helpName");
+const focusName = document.querySelector("#name");
+const helpName = document.querySelector("#helpName");
 
 focusName.addEventListener("focus", function () {
 	helpName.textContent = "Entrez votre nom.";
@@ -46,8 +46,8 @@ focusName.addEventListener("blur", function () {
 });
 
 // Help for first name
-var focusFn = document.querySelector("#first-name");
-var helpFn = document.querySelector("#helpFn");
+const focusFn = document.querySelector("#first-name");
+const helpFn = document.querySelector("#helpFn");
 
 focusFn.addEventListener("focus", function () {
 	helpFn.textContent = "Entrez votre prénom.";
@@ -60,8 +60,8 @@ focusFn.addEventListener("blur", function () {
 });
 
 // Help for date
-var focusDate = document.querySelector("#date");
-var helpDate = document.querySelector("#helpDate");
+const focusDate = document.querySelector("#date");
+const helpDate = document.querySelector("#helpDate");
 
 focusDate.addEventListener("focus", function () {
 	helpDate.textContent = "Entrez votre date de naissance.";
@@ -103,8 +103,8 @@ focusDate.addEventListener("blur", function (date) {
 });
 
 // Help for email
-var focusEmail = document.querySelector("#email");
-var helpEmail = document.querySelector("#helpEmail");
+const focusEmail = document.querySelector("#email");
+const helpEmail = document.querySelector("#helpEmail");
 
 focusEmail.addEventListener("focus", function () {
 	helpEmail.textContent = "Entrez votre courriel.";
@@ -118,7 +118,7 @@ focusEmail.addEventListener("blur", function () {
 	let arobase = emailValue.split("@");
 	let formatEmail = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 	// Email unauthorized
-	if (emailValue == "root@paca.happy-dev.fr" || emailValue == "admin@paca.happy-dev.fr" || emailValue == "dieu@paca.happy-dev.fr") {
+	if (emailValue === "root@paca.happy-dev.fr" || emailValue === "admin@paca.happy-dev.fr" || emailValue === "dieu@paca.happy-dev.fr") {
 		validEmail = "Cette adresse email n'est pas disponible.";
 		errorEmail = true;
 	}
@@ -140,8 +140,8 @@ focusEmail.addEventListener("blur", function () {
 });
 
 // Help for password
-var focusPassword = document.querySelector("#password");
-var helpPassword = document.querySelector("#helpPassword");
+const focusPassword = document.querySelector("#password");
+const helpPassword = document.querySelector("#helpPassword");
 
 focusPassword.addEventListener("focus", function () {
 	helpPassword.textContent = "Entrez votre mot de passe.";
@@ -154,8 +154,8 @@ focusPassword.addEventListener("blur", function () {
 });
 
 // Help for password confirmation
-var focusConfpassword = document.querySelector("#confpassword");
-var helpConfpassword = document.querySelector("#helpConfpassword");
+const focusConfpassword = document.querySelector("#confpassword");
+const helpConfpassword = document.querySelector("#helpConfpassword");
 
 focusConfpassword.addEventListener("focus", function () {
 	helpConfpassword.textContent = "Confirmez votre mot de passe.";
@@ -165,7 +165,7 @@ focusConfpassword.addEventListener("focus", function () {
 // Check passwords on blur
 focusConfpassword.addEventListener("blur", function () {
 	let validPassword = "";
-	if (focusConfpassword.value != focusPassword.value) {
+	if (focusConfpassword.value !== focusPassword.value) {
 		validPassword = "Les mots de passe ne correspondent pas.";
 		errorConfPassword = true;
 	}
@@ -176,13 +176,13 @@ focusConfpassword.addEventListener("blur", function () {
 	helpConfpassword.style.color = colorError;
 });
 
-var clickOnSubmit = document.querySelector("#form");
-var helpSubmit = document.querySelector("#response");
+const clickOnSubmit = document.querySelector("#form");
+const helpSubmit = document.querySelector("#response");
 
 // Check submit error on click
 clickOnSubmit.addEventListener("submit", function (submit) {
 	let checkForm = "";
-	if (errorPseudo == true || errorEmail == true || errorDate == true || errorConfPassword == true) {
+	if (errorPseudo === true || errorEmail === true || errorDate === true || errorConfPassword === true) {
 		checkForm = "Veuillez corriger les erreurs du formulaire.";
 		helpSubmit.style.color = colorError;
 	}

@@ -4,10 +4,10 @@ require('db.php');
 
 // Return of the function $db in db.php. 
 $db = getConnection();
+$login = $_POST['email'];
 
 if (isset($_POST['signup'])) {
 	if (!empty($_POST['email']) && !empty($_POST['password'])) {
-		$login = $_POST['email'];
 		$passhash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 		if(filter_var($login, FILTER_VALIDATE_EMAIL)) {
 			try {
@@ -46,7 +46,6 @@ if (isset($_POST['signup'])) {
 
 elseif (isset($_POST['signin'])) {
 	if (!empty($_POST['email']) && !empty($_POST['password'])) {
-		$login = $_POST['email'];
 		$password = $_POST['password'];
 		$row = null;
 		try {

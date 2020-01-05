@@ -1,4 +1,4 @@
-var learner = [
+const learner = [
 	"Benjamin Gouget",
 	"Florian Farris",
 	"Said Zenafi",
@@ -23,17 +23,17 @@ var learner = [
 	"Michel Christophe"
 ];
 
-var randomName = function (){
+const randomName = function (){
 	document.getElementById("display").innerHTML = learner[Math.floor(Math.random()*learner.length)]
-}
+};
 
-var allName = function(){
+const allName = function(){
 	document.getElementById("display").innerHTML="";
-	var ul = document.createElement('ul');
+	let ul = document.createElement('ul');
 	document.getElementById('display').appendChild(ul);
 	
 	learner.forEach(function(name){
-		var li = document.createElement('li');
+		let li = document.createElement('li');
 		ul.appendChild(li);
 		li.innerHTML += name;
-});}
+});};
