@@ -1,5 +1,6 @@
-# glossaire
+# Opqast glossary
 
-Here it is a project that aims to randomly generate a tip of opquast in PHP.
+Here it is a project that aims to randomly generate a tip of **Opquast** in **PHP**.
 
-FUNCTIONNAL !
+- [x] Storage of **Opqast** tips in a **PHP** array
+- [x] Generation of **Opqast** tips randomly with a **PHP** function

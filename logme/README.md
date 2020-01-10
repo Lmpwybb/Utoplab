@@ -1,5 +1,7 @@
-# logme
+# Simple Logme
 
-Here it is a project that aims to create a login in PHP by a DB, and to insert a function that changes the language in English/French.
+Here it is a project that aims to create a login in **PHP** by a **DB**, and to insert a function that changes the **language** in English or French.
 
-FUNCTIONNAL !
+- [x] Function which **manages** the **reading** and the **insertion** in a **DB**
+- [x] Password **hash** and **verify** function 
+- [x] Change **language** from a **PHP** array for each **langage**

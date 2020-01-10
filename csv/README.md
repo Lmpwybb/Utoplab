@@ -1,7 +1,7 @@
-# csv
+# CSV Import
 
-Here it is an attempt to create table from a csv file, and insert it into a previously created DB and entirely in PHP.
+Here it is an attempt to create table from a **CSV** file, and insert it into a previously created **DB** and entirely in **PHP**.
 
-CREATE TABLE => FUNCTIONNAL !
+- [x] Creation of the **DB** table **on the fly**
 
-INSERT IN DB => NON - FUNCTIONNAL (IN PROGRESS) !
+- [ ] **Insert** the data **read** into the **DB**
