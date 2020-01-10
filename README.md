@@ -1,4 +1,4 @@
-# Utoplab
+# Utoplab [My LinkedIn](https://www.linkedin.com/in/seb-cartoux/)
 
 ![Alt Text](http://utoplab.fr/images/utoplab/logo/logo.jpg)
 
