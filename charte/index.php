@@ -6,7 +6,7 @@ if (isset($_GET['error'])) {
 		echo "Cette personne a déjà signé la charte";
 	}
 	if ($_GET['error'] == 'notfilled') {
-		echo "Les champs n'ont pas étaient correctement remplies";
+		echo "Les champs n'ont pas été correctement remplis";
 	}
 }
 
