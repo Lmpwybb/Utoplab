@@ -1,6 +1,8 @@
 <?php
 require 'db.php';
 
+$db = getConnection();
+
 if (isset($_POST['signup'])) {
 	if (!empty($_POST['name']) && !empty($_POST['first_name'])) {
 		$name = $_POST['name'];
