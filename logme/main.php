@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true) {
-	header('Location: logme.php?error=notloggedin');
+	header('Location: index.php?error=notloggedin');
 	die();
 }
 require('translate.php');
