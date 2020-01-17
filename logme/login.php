@@ -13,7 +13,7 @@ if (isset($_POST['signup'])) {
 			try {
 				$stmt = $db->prepare('SELECT * FROM users WHERE email=?');
 				$stmt->execute(array($login));
-				$exist = $stmt->rowCount() == 0;
+				$exist = $stmt->rowCount() === 0;
 			} 
 			catch (PDOException $error) {
 				die($error->getMessage());
@@ -22,7 +22,7 @@ if (isset($_POST['signup'])) {
 				try {
 					$stmt = $db->prepare('INSERT INTO users (email, password) VALUES (?, ?)');
 					$stmt->execute(array($login, $passhash));
-					header('Location: logme.php?success=signed');
+					header('Location: index.php?success=signed');
 					die();
 				} 
 				catch (PDOException $error) {
@@ -30,17 +30,17 @@ if (isset($_POST['signup'])) {
 				}
 			}
 			else {
-				header('Location: logme.php?error=loginexist');
+				header('Location: index.php?error=loginexist');
 				die();
 			}
 		}
 		else {
-			header('Location: logme.php?error=notanemail');
+			header('Location: index.php?error=notanemail');
 			die();
 		}
     }
     else {
-		header('Location: logme.php?error=notfilled');
+		header('Location: index.php?error=notfilled');
 	}
 }
 
@@ -65,12 +65,12 @@ elseif (isset($_POST['signin'])) {
 			die();
 		}
 		else {
-			header('Location: logme.php?error=bad');
+			header('Location: index.php?error=bad');
 			die();
 		}
 	}
 	else {
-		header('Location: logme.php?error=notfilled');
+		header('Location: index.php?error=notfilled');
 		die();
 	}
 }
