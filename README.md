@@ -11,6 +11,6 @@ Link to my site:
 
 https://lmpwybb.alwaysdata.net/
 
-Lint to a CMS test:
+Lint to a CMS test make with Wordpress:
 
 https://lmpwybb.alwaysdata.net/wpcms/
