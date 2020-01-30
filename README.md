@@ -7,10 +7,6 @@
 Here you will find some **projects** made during my **training**
 - [ ] **DB.php file** which represents the **connection** to the **DB** is not in the projects to protect my identifiers.
 
-Link to my site:
+Link to my site:                                             Lint to a Wordpress CMS Test:
 
-https://lmpwybb.alwaysdata.net/
-
-Lint to a CMS test make with Wordpress:
-
-https://lmpwybb.alwaysdata.net/wpcms/
+https://lmpwybb.alwaysdata.net/                              https://lmpwybb.alwaysdata.net/wpcms/
