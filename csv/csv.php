@@ -36,12 +36,10 @@
 			</div>
 			<div class="pos success">
 				<?php
-					if (isset($_GET['success'])) {
-						if ($_GET['success'] == 'import') {
-							echo "Le fichier a bien été importé.<br>";
-							echo "La table a bien été crée dans la base de donnée.<br>";
-							echo "EN COURS.";
-						}
+					if (isset($_GET['success']) && $_GET['success'] == 'import') {
+                        echo "Le fichier a bien été importé.<br>";
+                        echo "La table a bien été crée dans la base de donnée.<br>";
+                        echo "EN COURS.";
 					}
 				?>
 			</div>
