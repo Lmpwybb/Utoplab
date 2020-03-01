@@ -29,10 +29,8 @@
 	<div class="success getindex">
 		<?php
 		// Here we are checking if there is success return in GET and we display the sentence
-			if (isset($_GET['success'])) {
-				if ($_GET['success'] == 'signed') {
-					echo "Vous vous êtes enregistré";
-				}
+			if (isset($_GET['success']) && $_GET['success'] == 'signed') {
+                echo "Vous vous êtes enregistré";
 			}
 		?>
 	</div>
