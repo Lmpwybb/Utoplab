@@ -1,13 +1,11 @@
 <?php
 include 'db.php';
 
-if (isset($_GET['error'])) {
-	if ($_GET['error'] == 'allreadysign') {
-		echo "Cette personne a déjà signé la charte";
-	}
-	if ($_GET['error'] == 'notfilled') {
-		echo "Les champs n'ont pas été correctement remplis";
-	}
+if (isset($_GET['error']) && $_GET['error'] == 'allreadysign') {
+    echo "Cette personne a déjà signé la charte";
+}
+if (isset($_GET['error']) &&$_GET['error'] == 'notfilled') {
+    echo "Les champs n'ont pas été correctement remplis";
 }
 
 // Return of the function $db in db.php. 
