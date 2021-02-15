@@ -5,7 +5,3 @@ Here it is a project that aims to **randomly** display an student or display eve
 - [x] Storage of **students** names in a **JavaScript** array
 - [x] **JavaScript** function which **randomly** generates a student
 - [x] **JavaScript** function which **display** all students
-
-Link to the project:
-
-https://lmpwybb.alwaysdata.net/projet-js/
