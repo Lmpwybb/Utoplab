@@ -8,4 +8,4 @@ Here you will find some **projects** made during my **training**
 
 Link to my site: https://lmpwybb.alwaysdata.net/
 
-Link to a Wordpress CMS Test: https://lmpwybb.alwaysdata.net/wpcms/
+Link to Lady-M a Wordpress CMS: https://lmpwybb.alwaysdata.net/wpcms/
